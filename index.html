@@ -6,13 +6,27 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="style.css">
     <meta name="description" content="TJ Blockchain and Cryptocurrency Club Website" />
+  </head>
+<h1>Typewriter</h1>
+
+<button onclick="typeWriter()">Click me</button>
+
+<p id="demo"></p>
 
     <script>
-    function myFunction() {
-      document.getElementById("demo").innerHTML = "Paragraph changed.";
+    var i = 0;
+    var txt = 'The TJ Blockchain and Cryptocurrency Club';
+    var speed = 50;
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
     }
     </script>
-  </head>
+
 <body>
 
 <h1>A Web Page</h1>
